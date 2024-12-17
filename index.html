@@ -41,8 +41,8 @@
         <h2>Projects</h2>
         <div class="project">
             <h3>LMS System</h3>
-            <p>An LMS built with NestJS, Firebase Authentication, and PostgreSQL supporting role-based access control
-                for admins, teachers, and students.</p>
+            <p>An LMS built with NestJS, Firebase Authentication, and PostgreSQL supporting role-based access control.
+            </p>
             <a href="https://drive.google.com/file/d/16ahO7sf-qnAd60XrJwCVaX2UYDBjFUYW/view?usp=sharing"
                 target="_blank">Watch Video</a>
         </div>
@@ -54,8 +54,7 @@
         </div>
         <div class="project">
             <h3>Real-Time Chat Application</h3>
-            <p>Built with a NestJS backend and a Vue.js frontend, enabling seamless communication between multiple
-                users.</p>
+            <p>Built with a NestJS backend and a Vue.js frontend, enabling seamless communication between users.</p>
             <a href="https://drive.google.com/file/d/1IQy3WkN0_cnU94aNQnmimHOdmBfA0DfD/view?usp=sharing"
                 target="_blank">Watch Video</a>
         </div>
@@ -82,10 +81,33 @@
         <p>GitHub: <a href="https://github.com/Mali-98" target="_blank">Mali-98</a></p>
     </section>
 
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTop" aria-label="Scroll to Top">↑</button>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Mohamed Ahmed Ali</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const scrollTopButton = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        });
+
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
