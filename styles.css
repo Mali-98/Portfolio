@@ -49,6 +49,14 @@ nav ul li a.active {
     padding: 3rem 0;
 }
 
+.hero-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
