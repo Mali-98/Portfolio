@@ -56,10 +56,10 @@
     <section id="skills">
         <h2>Skills</h2>
         <ul class="skills-list">
-            <li>Programming Languages: Python, JavaScript, C++, SQL</li>
+            <li>Programming Languages: Python, JavaScript, C++, SQL, Java</li>
             <li>Frameworks: NestJS, ExpressJS</li>
-            <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
-            <li>Game Development: Unity, Unreal Engine</li>
+            <li>Data Analysis: Pandas, NumPy, Matplotlib, Power BI</li>
+            <li>Game Development: Unity</li>
             <li>Embedded Systems: Arduino, Raspberry Pi</li>
             <li>Databases: Google Firebase, PostgreSQL, MongoDB</li>
         </ul>
@@ -68,150 +68,175 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-link active" data-tab="web">Web</button>
+            <button class="tab-link" data-tab="ai">AI</button>
+            <button class="tab-link" data-tab="mechatronics">Mechatronics</button>
+            <button class="tab-link" data-tab="gaming">Gaming</button>
+        </div>
 
         <!-- Web Projects -->
-        <div class="projects-category">
-            <h3>Web</h3>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>LMS System</h3>
-                    <p>Developed a Learning Management System (LMS) using NestJS, Firebase Authentication, and
-                        PostgreSQL, with robust role-based access control.</p>
-                    <a href="https://drive.google.com/file/d/16ahO7sf-qnAd60XrJwCVaX2UYDBjFUYW/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>NestJS Multi-Role Application</h3>
-                    <p>Designed a scalable multi-role application supporting Admin, Vendor, and Consumer
-                        functionalities, with MongoDB integration for efficient data management.</p>
-                    <a href="https://drive.google.com/file/d/1ZQ0jNx6QW1GTUaN4StdWOgZ7ctjF3Bop/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Real-Time Chat Application</h3>
-                    <p>Built a real-time chat application featuring a NestJS backend and Vue.js frontend, enabling
-                        seamless communication across users.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1IQy3WkN0_cnU94aNQnmimHOdmBfA0DfD/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Siminds LabsForHome</h3>
-                    <p>Created a 3D simulation platform for conducting interactive scientific experiments in physics,
-                        chemistry, and biology.</p>
-                    <a href="https://drive.google.com/file/d/11L5aegobqw9cvKKOoKd_untGb-mnaNFO/view?usp=sharing"
-                        target="_blank">Watch Video</a>
+        <div class="tab-content active" id="web">
+            <div class="projects-category">
+                <!-- <h3>Web</h3> -->
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>LMS System</h3>
+                        <p>Developed a Learning Management System (LMS) using NestJS, Firebase Authentication, and
+                            PostgreSQL, with robust role-based access control.</p>
+                        <a href="https://drive.google.com/file/d/16ahO7sf-qnAd60XrJwCVaX2UYDBjFUYW/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>NestJS Multi-Role Application</h3>
+                        <p>Designed a scalable multi-role application supporting Admin, Vendor, and Consumer
+                            functionalities, with MongoDB integration for efficient data management.</p>
+                        <a href="https://drive.google.com/file/d/1ZQ0jNx6QW1GTUaN4StdWOgZ7ctjF3Bop/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Real-Time Chat Application</h3>
+                        <p>Built a real-time chat application featuring a NestJS backend and Vue.js frontend, enabling
+                            seamless communication across users.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1IQy3WkN0_cnU94aNQnmimHOdmBfA0DfD/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Siminds LabsForHome</h3>
+                        <p>Created a 3D simulation platform for conducting interactive scientific experiments in
+                            physics,
+                            chemistry, and biology.</p>
+                        <a href="https://drive.google.com/file/d/11L5aegobqw9cvKKOoKd_untGb-mnaNFO/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- AI Projects -->
-        <div class="projects-category">
-            <h3>AI</h3>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Unity Hand Tracking</h3>
-                    <p>Implemented advanced hand landmark tracking functionality within the Unity game engine, enabling
-                        dynamic interaction capabilities.</p>
-                    <a href="https://drive.google.com/file/d/1bvFTe85euwHhZvRF9bF2j_cnQ76U6gk3/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Unity Motion Detection</h3>
-                    <p>Integrated body landmark tracking within Unity to enhance motion detection for immersive
-                        applications.</p>
-                    <a href="https://drive.google.com/file/d/1mh6rqb5L3ehk7fxANV2zqourN9Dj10-Z/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Flappy Bird Using Machine Learning</h3>
-                    <p>Created an AI-driven Flappy Bird game that utilizes neural networks and genetic algorithms for
-                        self-play capabilities.</p>
-                    <a href="https://drive.google.com/file/d/14P7M9gygNMbRNffvd5f-tYm5litNwkpF/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Chrome Dino Game Using Machine Learning</h3>
-                    <p>Developed an AI-based version of the Chrome Dino game, employing neural networks and genetic
-                        algorithms for autonomous gameplay.</p>
-                    <a href="https://drive.google.com/file/d/1kuyHTtJ8eOzYOy_CospW5zVBFpe7pia3/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Chatbot</h3>
-                    <p>Built an intelligent chatbot using Python that leverages machine learning to adapt and respond
-                        effectively to user queries.</p>
-                    <a href="https://drive.google.com/file/d/1unMvUbHDvpNOJHQVAUf7MEC0zZdaTWTZ/view?usp=sharing"
-                        target="_blank">Watch Video</a>
+        <div class="tab-content" id="ai">
+            <div class="projects-category">
+                <!-- <h3>AI</h3> -->
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>Unity Hand Tracking</h3>
+                        <p>Implemented advanced hand landmark tracking functionality within the Unity game engine,
+                            enabling
+                            dynamic interaction capabilities.</p>
+                        <a href="https://drive.google.com/file/d/1bvFTe85euwHhZvRF9bF2j_cnQ76U6gk3/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Unity Motion Detection</h3>
+                        <p>Integrated body landmark tracking within Unity to enhance motion detection for immersive
+                            applications.</p>
+                        <a href="https://drive.google.com/file/d/1mh6rqb5L3ehk7fxANV2zqourN9Dj10-Z/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Flappy Bird Using Machine Learning</h3>
+                        <p>Created an AI-driven Flappy Bird game that utilizes neural networks and genetic algorithms
+                            for
+                            self-play capabilities.</p>
+                        <a href="https://drive.google.com/file/d/14P7M9gygNMbRNffvd5f-tYm5litNwkpF/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Chrome Dino Game Using Machine Learning</h3>
+                        <p>Developed an AI-based version of the Chrome Dino game, employing neural networks and genetic
+                            algorithms for autonomous gameplay.</p>
+                        <a href="https://drive.google.com/file/d/1kuyHTtJ8eOzYOy_CospW5zVBFpe7pia3/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Chatbot</h3>
+                        <p>Built an intelligent chatbot using Python that leverages machine learning to adapt and
+                            respond
+                            effectively to user queries.</p>
+                        <a href="https://drive.google.com/file/d/1unMvUbHDvpNOJHQVAUf7MEC0zZdaTWTZ/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Mechatronics Projects -->
-        <div class="projects-category">
-            <h3>Mechatronics</h3>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Arduino Shield</h3>
-                    <p>Designed a modular Arduino shield with a detachable LCD screen, versatile buttons, and enhanced
-                        functionality. The shield supports 5V and GND connections on every IO pin and includes battery
-                        compatibility for portable applications.</p>
-                    <a href="https://drive.google.com/file/d/1eknhGbDOg2jV1jVqoYlLEtW7SeSoXw5X/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Controlling Arduino Using Python Hand Tracking</h3>
-                    <p>Developed a system to control LEDs using Python-based hand tracking, integrating real-time data
-                        transmission to the Arduino IDE via serial communication.</p>
-                    <a href="https://drive.google.com/file/d/1aRBFjA5CvMtI_KUDilkQgIbaaO4AtwmR/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Soft Robotic Glove For Rehabilitation</h3>
-                    <p>Engineered a rehabilitative soft robotic glove utilizing microcontrollers, flex sensors, and
-                        force sensors to aid patients in physical recovery.</p>
-                    <a href="https://www.youtube.com/watch?v=5hlV_WJCDLY" target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Lotfy The Butler Robot</h3>
-                    <p> Designed and developed a mobile robot with object detection and GPS capabilities to assist with
-                        luggage carrying in travel scenarios.</p>
-                    <a href="https://drive.google.com/file/d/1X1MY8nexfzA52Ko81jalA516XFQ8OlWu/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Famous Theme Songs Using Arduino</h3>
-                    <p> Programmed an Arduino to play iconic theme songs, such as "Super Mario Bros." and "Pink
-                        Panther," using a buzzer for auditory entertainment.</p>
-                    <a href="https://drive.google.com/file/d/1d1H3N7M6wrrjoMs-h6E7M-lI5QW6A7rt/view?usp=sharing"
-                        target="_blank">Watch Video</a>
+        <div class="tab-content" id="mechatronics">
+            <div class="projects-category">
+                <!-- <h3>Mechatronics</h3> -->
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>Arduino Shield</h3>
+                        <p>Designed a modular Arduino shield with a detachable LCD screen, versatile buttons, and
+                            enhanced
+                            functionality. The shield supports 5V and GND connections on every IO pin and includes
+                            battery
+                            compatibility for portable applications.</p>
+                        <a href="https://drive.google.com/file/d/1eknhGbDOg2jV1jVqoYlLEtW7SeSoXw5X/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Controlling Arduino Using Python Hand Tracking</h3>
+                        <p>Developed a system to control LEDs using Python-based hand tracking, integrating real-time
+                            data
+                            transmission to the Arduino IDE via serial communication.</p>
+                        <a href="https://drive.google.com/file/d/1aRBFjA5CvMtI_KUDilkQgIbaaO4AtwmR/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Soft Robotic Glove For Rehabilitation</h3>
+                        <p>Engineered a rehabilitative soft robotic glove utilizing microcontrollers, flex sensors, and
+                            force sensors to aid patients in physical recovery.</p>
+                        <a href="https://www.youtube.com/watch?v=5hlV_WJCDLY" target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Lotfy The Butler Robot</h3>
+                        <p> Designed and developed a mobile robot with object detection and GPS capabilities to assist
+                            with
+                            luggage carrying in travel scenarios.</p>
+                        <a href="https://drive.google.com/file/d/1X1MY8nexfzA52Ko81jalA516XFQ8OlWu/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Famous Theme Songs Using Arduino</h3>
+                        <p> Programmed an Arduino to play iconic theme songs, such as "Super Mario Bros." and "Pink
+                            Panther," using a buzzer for auditory entertainment.</p>
+                        <a href="https://drive.google.com/file/d/1d1H3N7M6wrrjoMs-h6E7M-lI5QW6A7rt/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Gaming Projects -->
-        <div class="projects-category">
-            <h3>Gaming</h3>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>DOOM Clone</h3>
-                    <p>Programmed a Python-based DOOM clone featuring diverse weapons, enemies, and levels for a
-                        complete gaming experience.</p>
-                    <a href="https://drive.google.com/file/d/1OXC6OPqXUXEZK7qNpH_Ni00o-J5dwCCp/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Mega Mania</h3>
-                    <p>Developed a Java platformer game offering various levels, power-ups, and challenging enemies to
-                        enhance gameplay dynamics.</p>
-                    <a href="https://drive.google.com/file/d/1MDmR6KOH0I91_kLv0CbQxff7SxzX32LO/view?usp=sharing"
-                        target="_blank">Watch Video</a>
-                </div>
-                <div class="project">
-                    <h3>Fighting Frenzy</h3>
-                    <p>Designed a simple yet engaging Python-based fighting game showcasing core combat mechanics.</p>
-                    <a href="https://drive.google.com/file/d/1WwkQYAwZAkmzmbXpLFn8WyRs3t7wbCgn/view?usp=sharing"
-                        target="_blank">Watch Video</a>
+        <div class="tab-content" id="gaming">
+            <div class="projects-category">
+                <!-- <h3>Gaming</h3> -->
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>DOOM Clone</h3>
+                        <p>Programmed a Python-based DOOM clone featuring diverse weapons, enemies, and levels for a
+                            complete gaming experience.</p>
+                        <a href="https://drive.google.com/file/d/1OXC6OPqXUXEZK7qNpH_Ni00o-J5dwCCp/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Mega Mania</h3>
+                        <p>Developed a Java platformer game offering various levels, power-ups, and challenging enemies
+                            to
+                            enhance gameplay dynamics.</p>
+                        <a href="https://drive.google.com/file/d/1MDmR6KOH0I91_kLv0CbQxff7SxzX32LO/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
+                    <div class="project">
+                        <h3>Fighting Frenzy</h3>
+                        <p>Designed a simple yet engaging Python-based fighting game showcasing core combat mechanics.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1WwkQYAwZAkmzmbXpLFn8WyRs3t7wbCgn/view?usp=sharing"
+                            target="_blank">Watch Video</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,6 +289,19 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                tabLinks.forEach(link => link.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                link.classList.add('active');
+                document.getElementById(link.dataset.tab).classList.add('active');
             });
         });
     </script>
