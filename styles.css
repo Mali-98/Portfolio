@@ -125,6 +125,17 @@ h2 {
     color: #ff9800;
 }
 
+/* Social Media Icons */
+#contact a i {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+#contact a i:hover {
+    color: #ff9800;
+}
+
 /* Scroll-to-Top Button */
 #scrollTop {
     position: fixed;
