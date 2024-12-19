@@ -43,42 +43,36 @@ nav ul li a.active {
 #hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 0;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+    padding: 3rem 2rem;
+    background-color: #0b0e17;
 }
 
-.hero-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    object-fit: cover;
+.hero-content {
+    max-width: 50%;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
-    animation: fadeIn 2s ease-in;
+    color: #00bcd4;
+    margin-bottom: 1rem;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #ccc;
-    animation: fadeIn 2s ease-in 0.5s;
+    color: #fff;
+    margin-bottom: 2rem;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
 }
 
 /* Section Styling */
@@ -126,14 +120,36 @@ h2 {
 }
 
 /* Social Media Icons */
+#contact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 #contact a i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #00bcd4;
     transition: color 0.3s ease;
 }
 
 #contact a i:hover {
     color: #ff9800;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+    border: 2px solid #00bcd4;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+    background-color: #00bcd4;
+    color: #0b0e17;
 }
 
 /* Scroll-to-Top Button */
