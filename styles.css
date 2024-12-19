@@ -152,6 +152,11 @@ h2 {
     color: #0b0e17;
 }
 
+#contact a:hover i {
+    color: #000000;
+    text-shadow: 0 0 10px #ffffff;
+}
+
 /* Scroll-to-Top Button */
 #scrollTop {
     position: fixed;
