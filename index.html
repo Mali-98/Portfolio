@@ -23,7 +23,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" class="fade-in">
         <div class="hero-content">
             <h1>Hi, It's Mohamed Ahmed Ali</h1>
             <p>Mechatronics Engineer | Backend Developer | Data Analyst</p>
@@ -43,7 +43,7 @@
     </section>
 
     <!-- About Me -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>I am a Mechatronics Engineer with extensive experience in Backend Development, Data Analysis, Product
             Ownership, Testing, and Embedded Software & Robotics. Passionate about AI technologies and game development.
@@ -51,7 +51,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="fade-in">
         <h2>Education</h2>
         <div class="education-item">
             <h3>Bachelor of Science Mechatronics Engineering</h3>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Skills</h2>
         <ul class="skills-list">
             <li>Programming Languages: Python, JavaScript, TypeScript, C, C++, Java, PHP, SQL</li>
@@ -79,7 +79,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <!-- Tab Navigation -->
         <div class="tab-nav">
@@ -363,6 +363,26 @@
                 document.getElementById(link.dataset.tab).classList.add('active');
             });
         });
+
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
     </script>
 </body>
 
