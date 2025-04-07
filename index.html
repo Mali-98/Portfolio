@@ -7,9 +7,18 @@
     <title>Mohamed Ali - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
     <!-- Navigation Header -->
     <header>
         <nav aria-label="Main Navigation">
@@ -25,7 +34,7 @@
     <!-- Hero Section -->
     <section id="hero" class="fade-in">
         <div class="hero-content">
-            <h1>Hi, It's Mohamed Ahmed Ali</h1>
+            <h1 id="typed-text"></h1>
             <p>Mechatronics Engineer | Backend Developer | Data Analyst</p>
             <div id="contact">
                 <a href="mailto:mohamed.ahmed159840@gmail.com" target="_blank">
@@ -44,7 +53,7 @@
 
     <!-- About Me -->
     <section id="about" class="fade-in">
-        <h2>About Me</h2>
+        <h2 class="glitch" data-text="About Me">About Me</h2>
         <p>I am a Mechatronics Engineer with extensive experience in Backend Development, Data Analysis, Product
             Ownership, Testing, and Embedded Software & Robotics. Passionate about AI technologies and game development.
         </p>
@@ -52,7 +61,7 @@
 
     <!-- Education Section -->
     <section id="education" class="fade-in">
-        <h2>Education</h2>
+        <h2 class="glitch" data-text="Education">Education</h2>
         <div class="education-item">
             <h3>Bachelor of Science Mechatronics Engineering</h3>
             <p>Faculty of
@@ -64,7 +73,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="fade-in">
-        <h2>Skills</h2>
+        <h2 class="glitch" data-text="Skills">Skills</h2>
         <ul class="skills-list">
             <li>Programming Languages: Python, JavaScript, TypeScript, C, C++, Java, PHP, SQL</li>
             <li>Frameworks & Libraries: NestJS, ExpressJS, Laravel</li>
@@ -80,7 +89,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="fade-in">
-        <h2>Projects</h2>
+        <h2 class="glitch" data-text="Projects">Projects</h2>
         <!-- Tab Navigation -->
         <div class="tab-nav">
             <button class="tab-link active" data-tab="web">Web</button>
@@ -334,6 +343,160 @@
 
     <!-- JavaScript -->
     <script>
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+        
+        document.addEventListener('mousedown', () => {
+            cursor.style.transform = 'scale(0.8)';
+            cursorFollower.style.transform = 'scale(0.8)';
+        });
+        
+        document.addEventListener('mouseup', () => {
+            cursor.style.transform = 'scale(1)';
+            cursorFollower.style.transform = 'scale(1)';
+        });
+        
+        // Hover effect for links
+        document.querySelectorAll('a, button').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursorFollower.style.transform = 'scale(1.5)';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursorFollower.style.transform = 'scale(1)';
+            });
+        });
+
+        // Typed.js for typing animation
+        const typed = new Typed('#typed-text', {
+            strings: ['Hi, It\'s Mohamed Ahmed Ali', 'Mechatronics Engineer', 'Backend Developer', 'Data Analyst'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Particles.js for background
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#00bcd4'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00bcd4',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        // Scroll-to-Top Button
         const scrollTopButton = document.getElementById('scrollTop');
 
         window.addEventListener('scroll', () => {
@@ -351,6 +514,7 @@
             });
         });
 
+        // Tab Navigation
         const tabLinks = document.querySelectorAll('.tab-link');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -364,6 +528,7 @@
             });
         });
 
+        // Fade-in Animation
         const faders = document.querySelectorAll('.fade-in');
 
         const appearOptions = {
@@ -382,7 +547,6 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
-
     </script>
 </body>
 
