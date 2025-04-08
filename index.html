@@ -362,21 +362,26 @@
             cursorFollower.style.transform = 'scale(0.8)';
         });
         
-        document.addEventListener('mouseup', () => {
-            cursor.style.transform = 'scale(1)';
-            cursorFollower.style.transform = 'scale(1)';
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorFollower.style.left = e.clientX + 'px';
+            cursorFollower.style.top = e.clientY + 'px';
         });
-        
-        // Hover effect for links
-        document.querySelectorAll('a, button').forEach(link => {
-            link.addEventListener('mouseenter', () => {
+
+        // Add hover effect to all links and buttons
+        const interactiveElements = document.querySelectorAll('a, button');
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'scale(1.5)';
                 cursorFollower.style.transform = 'scale(1.5)';
+                cursor.style.backgroundColor = 'rgba(0, 188, 212, 0.2)';
             });
             
-            link.addEventListener('mouseleave', () => {
+            element.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'scale(1)';
                 cursorFollower.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
             });
         });
 
