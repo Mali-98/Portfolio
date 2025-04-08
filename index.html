@@ -32,10 +32,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="fade-in">
+    <section id="hero">
         <div class="hero-content">
-            <h1 id="typed-text"></h1>
-            <p>Mechatronics Engineer | Backend Developer | Data Analyst</p>
+            <h1><span id="typed-text"></span></h1>
+            <p class="subtitle">Mechatronics Engineer | Backend Developer | Data Analyst</p>
             <div id="contact">
                 <a href="mailto:mohamed.ahmed159840@gmail.com" target="_blank">
                     <i class="fas fa-envelope"></i> Email
@@ -380,16 +380,27 @@
             });
         });
 
-        // Typed.js for typing animation
-        const typed = new Typed('#typed-text', {
-            strings: ['Hi, It\'s Mohamed Ahmed Ali', 'Mechatronics Engineer', 'Backend Developer', 'Data Analyst'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true
+        // Initialize Typed.js with onComplete callback
+        new Typed('#typed-text', {
+            strings: ['Hi, It\'s Mohamed Ahmed Ali'],
+            typeSpeed: 70,
+            startDelay: 300,
+            showCursor: true,
+            cursorChar: '│',
+            autoInsertCss: false,
+            loop: false,
+            onComplete: function(self) {
+                // Fade out the cursor after typing completes
+                setTimeout(() => {
+                    const cursor = document.querySelector('.typed-cursor');
+                    if (cursor) {
+                        cursor.style.transition = 'opacity 0.5s';
+                        cursor.style.opacity = '0';
+                    }
+                }, 1500);
+            }
         });
 
-        // Particles.js for background
         particlesJS('particles-js', {
             particles: {
                 number: {
