@@ -4,14 +4,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    cursor: none; /* Hide default cursor for custom cursor */
+    cursor: none;
+    /* Hide default cursor for custom cursor */
 }
 
 body {
     background-color: #0b0e17;
     color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 /* Custom Cursor */
@@ -51,7 +53,8 @@ body {
 /* Header Styles */
 header {
     display: flex;
-    justify-content: center; /* Center the navigation */
+    justify-content: center;
+    /* Center the navigation */
     align-items: center;
     padding: 1rem 2rem;
     position: relative;
@@ -60,9 +63,12 @@ header {
 
 .brand-logo {
     position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for centering */
-    left: 2rem; /* Keep the logo on the left */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for centering */
+    left: 2rem;
+    /* Keep the logo on the left */
     width: 60px;
     height: 60px;
     object-fit: contain;
@@ -145,8 +151,15 @@ nav ul li a.active {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .typed-fade-out {
@@ -163,8 +176,13 @@ nav ul li a.active {
 }
 
 @keyframes highlight {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .subtitle {
@@ -194,9 +212,11 @@ nav ul li a.active {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -207,6 +227,7 @@ nav ul li a.active {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -217,7 +238,7 @@ nav ul li a.active {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-image {
         width: 350px;
         height: 350px;
@@ -249,15 +270,20 @@ nav ul li a.active {
     }
 
     .brand-logo {
-        width: 40px; /* Reduce size for mobile */
+        width: 40px;
+        /* Reduce size for mobile */
         height: 40px;
-        left: 1rem; /* Adjust position */
-        top: 1rem; /* Ensure proper alignment */
-        transform: none; /* Remove vertical centering */
+        left: 1rem;
+        /* Adjust position */
+        top: 1rem;
+        /* Ensure proper alignment */
+        transform: none;
+        /* Remove vertical centering */
     }
 
     header {
-        justify-content: center; /* Keep navigation centered */
+        justify-content: center;
+        /* Keep navigation centered */
     }
 }
 
@@ -361,23 +387,102 @@ h2 {
 }
 
 /* Skills Section */
-.skills-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#skills {
+    padding: 4rem 2rem;
+    background-color: #0f121a;
+    /* Slightly darker than body for depth */
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #00bcd4;
+}
+
+.skill-filters {
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-filter-btn {
+    background-color: #1a1f2d;
+    color: #fff;
+    border: 1px solid #00bcd4;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.skill-filter-btn:hover {
+    background-color: #00bcd4;
+    color: #0f121a;
+    transform: translateY(-2px);
+}
+
+.skill-filter-btn.active {
+    background-color: #00bcd4;
+    color: #0f121a;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.skills-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .skill-item {
-    margin: 10px 0;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    background-color: #1a1f2d;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #2a3040;
+    /* Subtle border */
 }
 
 .skill-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(10px);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.25);
+    background-color: #22283a;
+    border-color: #00bcd4;
+}
+
+.skill-item i {
+    font-size: 3.5rem;
+    /* Devicon size */
+    margin-bottom: 0.8rem;
+    color: #00bcd4;
+    /* Default color, can be overridden by 'colored' class */
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.1);
+}
+
+.skill-item span {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: auto;
+    /* Pushes text to bottom if icons vary in height */
+}
+
+/* Hide skills not matching filter */
+.skill-item.hide {
+    display: none;
 }
 
 /* Social Media Icons */
@@ -644,12 +749,17 @@ section:hover::before {
 }
 
 @keyframes glitch {
-    2%, 64% {
+
+    2%,
+    64% {
         transform: translate(2px, 0) skew(0deg);
     }
-    4%, 60% {
+
+    4%,
+    60% {
         transform: translate(-2px, 0) skew(0deg);
     }
+
     62% {
         transform: translate(0, 0) skew(5deg);
     }
@@ -683,63 +793,83 @@ section:hover::before {
     0% {
         clip: rect(42px, 9999px, 44px, 0);
     }
+
     5% {
         clip: rect(12px, 9999px, 59px, 0);
     }
+
     10% {
         clip: rect(48px, 9999px, 29px, 0);
     }
+
     15.0% {
         clip: rect(42px, 9999px, 73px, 0);
     }
+
     20% {
         clip: rect(63px, 9999px, 27px, 0);
     }
+
     25% {
         clip: rect(34px, 9999px, 55px, 0);
     }
+
     30.0% {
         clip: rect(86px, 9999px, 73px, 0);
     }
+
     35% {
         clip: rect(20px, 9999px, 20px, 0);
     }
+
     40% {
         clip: rect(26px, 9999px, 60px, 0);
     }
+
     45% {
         clip: rect(25px, 9999px, 66px, 0);
     }
+
     50% {
         clip: rect(57px, 9999px, 98px, 0);
     }
+
     55.0% {
         clip: rect(5px, 9999px, 46px, 0);
     }
+
     60.0% {
         clip: rect(82px, 9999px, 31px, 0);
     }
+
     65% {
         clip: rect(54px, 9999px, 27px, 0);
     }
+
     70% {
         clip: rect(28px, 9999px, 99px, 0);
     }
+
     75% {
         clip: rect(45px, 9999px, 69px, 0);
     }
+
     80% {
         clip: rect(23px, 9999px, 85px, 0);
     }
+
     85.0% {
         clip: rect(54px, 9999px, 84px, 0);
     }
+
     90% {
         clip: rect(45px, 9999px, 47px, 0);
     }
+
     95% {
         clip: rect(37px, 9999px, 20px, 0);
     }
+
     100% {
         clip: rect(4px, 9999px, 91px, 0);
     }
@@ -749,63 +879,83 @@ section:hover::before {
     0% {
         clip: rect(65px, 9999px, 119px, 0);
     }
+
     5% {
         clip: rect(133px, 9999px, 14px, 0);
     }
+
     10% {
         clip: rect(77px, 9999px, 34px, 0);
     }
+
     15.0% {
         clip: rect(23px, 9999px, 133px, 0);
     }
+
     20% {
         clip: rect(40px, 9999px, 145px, 0);
     }
+
     25% {
         clip: rect(25px, 9999px, 90px, 0);
     }
+
     30.0% {
         clip: rect(57px, 9999px, 5px, 0);
     }
+
     35% {
         clip: rect(50px, 9999px, 96px, 0);
     }
+
     40% {
         clip: rect(60px, 9999px, 92px, 0);
     }
+
     45% {
         clip: rect(109px, 9999px, 134px, 0);
     }
+
     50% {
         clip: rect(54px, 9999px, 138px, 0);
     }
+
     55.0% {
         clip: rect(14px, 9999px, 26px, 0);
     }
+
     60.0% {
         clip: rect(66px, 9999px, 134px, 0);
     }
+
     65% {
         clip: rect(46px, 9999px, 85px, 0);
     }
+
     70% {
         clip: rect(30px, 9999px, 66px, 0);
     }
+
     75% {
         clip: rect(76px, 9999px, 135px, 0);
     }
+
     80% {
         clip: rect(121px, 9999px, 46px, 0);
     }
+
     85.0% {
         clip: rect(140px, 9999px, 82px, 0);
     }
+
     90% {
         clip: rect(30px, 9999px, 77px, 0);
     }
+
     95% {
         clip: rect(65px, 9999px, 82px, 0);
     }
+
     100% {
         clip: rect(102px, 9999px, 54px, 0);
     }

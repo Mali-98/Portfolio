@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
@@ -78,18 +79,121 @@
     <!-- Skills Section -->
     <section id="skills" class="fade-in">
         <h2 class="glitch" data-text="Skills">Skills</h2>
-        <ul class="skills-list">
-            <li>Programming Languages: Python, JavaScript, TypeScript, C, C++, Java, PHP, SQL</li>
-            <li>Frameworks & Libraries: NestJS, ExpressJS, Laravel</li>
-            <li>Backend Development: Backend APIs, Google Firestore, BigQuery</li>
-            <li>Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Power BI</li>
-            <li>Machine Learning: Model Development and Analysis</li>
-            <li>Game Development: Unity Game Engine</li>
-            <li>Embedded Systems: Arduino, Raspberry Pi</li>
-            <li>Databases: Google Firebase, PostgreSQL, MongoDB</li>
-            <li>UX/UI: User Experience and Interface Design</li>
-        </ul>
+
+        <!-- Filter Buttons -->
+        <div class="skill-filters">
+            <button class="skill-filter-btn active" data-filter="all">All</button>
+            <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+            <button class="skill-filter-btn" data-filter="backend">Backend</button>
+            <button class="skill-filter-btn" data-filter="data">Data</button>
+            <button class="skill-filter-btn" data-filter="embedded">Embedded</button>
+            <button class="skill-filter-btn" data-filter="game">Game Dev</button>
+            <button class="skill-filter-btn" data-filter="devops">DevOps</button>
+        </div>
+
+        <!-- Skill Grid -->
+        <div class="skills-icon-grid">
+
+            <!-- Frontend -->
+            <div class="skill-item" data-category="frontend">
+                <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+            </div>
+            <div class="skill-item" data-category="frontend">
+                <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+            </div>
+            <div class="skill-item" data-category="frontend backend">
+                <i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
+            </div>
+            <div class="skill-item" data-category="frontend backend">
+                <i class="devicon-typescript-plain colored"></i><span>TypeScript</span>
+            </div>
+            <div class="skill-item" data-category="frontend">
+                <i class="fas fa-paint-brush"></i><span>UX/UI Design</span>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-php-plain colored"></i><span>PHP</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-nestjs-plain colored"></i><span>NestJS</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-express-original colored"></i><span>ExpressJS</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-laravel-plain colored"></i><span>Laravel</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="fas fa-database"></i><span>SQL</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-firebase-plain colored"></i><span>Firebase</span>
+            </div>
+            <div class="skill-item" data-category="backend">
+                <i class="devicon-java-plain colored"></i><span>Java (Android)</span>
+            </div>
+
+            <!-- Data -->
+            <div class="skill-item" data-category="data">
+                <i class="devicon-python-plain colored"></i><span>Python</span>
+            </div>
+            <div class="skill-item" data-category="data">
+                <i class="devicon-pandas-original colored"></i><span>Pandas</span>
+            </div>
+            <div class="skill-item" data-category="data">
+                <i class="devicon-numpy-original colored"></i><span>NumPy</span>
+            </div>
+            <div class="skill-item" data-category="data">
+                <i class="fas fa-brain"></i><span>ML & Data Analysis</span>
+            </div>
+            <div class="skill-item" data-category="data">
+                <i class="fas fa-chart-line"></i><span>Power BI</span>
+            </div>
+            <div class="skill-item" data-category="data">
+                <i class="devicon-googlecloud-plain colored"></i><span>BigQuery (GCP)</span>
+            </div>
+
+            <!-- Embedded -->
+            <div class="skill-item" data-category="embedded">
+                <i class="devicon-c-plain colored"></i><span>C</span>
+            </div>
+            <div class="skill-item" data-category="embedded">
+                <i class="devicon-cplusplus-plain colored"></i><span>C++</span>
+            </div>
+            <div class="skill-item" data-category="embedded">
+                <i class="devicon-arduino-plain colored"></i><span>Arduino</span>
+            </div>
+            <div class="skill-item" data-category="embedded">
+                <i class="devicon-raspberrypi-line colored"></i><span>Raspberry Pi</span>
+            </div>
+
+            <!-- Game Dev -->
+            <div class="skill-item" data-category="game">
+                <i class="devicon-unity-original colored"></i><span>Unity</span>
+            </div>
+            <div class="skill-item" data-category="game">
+                <i class="devicon-csharp-plain colored"></i><span>C#</span>
+            </div>
+
+            <!-- DevOps -->
+            <div class="skill-item" data-category="devops">
+                <i class="devicon-git-plain colored"></i><span>Git</span>
+            </div>
+            <div class="skill-item" data-category="devops">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                    alt="Vercel Logo" class="icon-img">
+                <span>Vercel</span>
+            </div>
+        </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="fade-in">
@@ -156,8 +260,9 @@
                     </div>
                     <div class="project">
                         <h3>Medyour Application</h3>
-                        <p>Medyour is a medical app that lets users book appointments, 
-                            surgeries, and blood sampling operations with ease. It features seamless integration with a third-party payment system for secure, hassle-free transactions.</p>
+                        <p>Medyour is a medical app that lets users book appointments,
+                            surgeries, and blood sampling operations with ease. It features seamless integration with a
+                            third-party payment system for secure, hassle-free transactions.</p>
                         <a href="https://drive.google.com/file/d/1D943a9m5q9Zy9Cfo8m_mktVdwF9QsZtY/view?usp=sharing"
                             target="_blank">Watch Video</a>
                     </div>
@@ -357,22 +462,22 @@
         // Custom Cursor
         const cursor = document.querySelector('.cursor');
         const cursorFollower = document.querySelector('.cursor-follower');
-        
+
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            
+
             setTimeout(() => {
                 cursorFollower.style.left = e.clientX + 'px';
                 cursorFollower.style.top = e.clientY + 'px';
             }, 100);
         });
-        
+
         document.addEventListener('mousedown', () => {
             cursor.style.transform = 'scale(0.8)';
             cursorFollower.style.transform = 'scale(0.8)';
         });
-        
+
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
@@ -388,7 +493,7 @@
                 cursorFollower.style.transform = 'scale(1.5)';
                 cursor.style.backgroundColor = 'rgba(0, 188, 212, 0.2)';
             });
-            
+
             element.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'scale(1)';
                 cursorFollower.style.transform = 'scale(1)';
@@ -405,7 +510,7 @@
             cursorChar: '│',
             autoInsertCss: false,
             loop: false,
-            onComplete: function(self) {
+            onComplete: function (self) {
                 // Fade out the cursor after typing completes
                 setTimeout(() => {
                     const cursor = document.querySelector('.typed-cursor');
@@ -573,6 +678,31 @@
 
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.skill-filter-btn');
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    skillItems.forEach(item => {
+                        const itemCategories = item.getAttribute('data-category').split(' ');
+                        if (filterValue === 'all' || itemCategories.includes(filterValue)) {
+                            item.classList.remove('hide');
+                        } else {
+                            item.classList.add('hide');
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>
