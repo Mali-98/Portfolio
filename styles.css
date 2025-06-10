@@ -960,3 +960,19 @@ section:hover::before {
         clip: rect(102px, 9999px, 54px, 0);
     }
 }
+
+/* Force custom cursor everywhere */
+.skill-item,
+.skill-item * {
+    cursor: none !important;
+}
+
+.skill-filter-btn,
+.skill-filter-btn * {
+    cursor: none !important;
+}
+
+.tab-link,
+.tab-link * {
+    cursor: none !important;
+}
