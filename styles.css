@@ -391,13 +391,13 @@ h2 {
     padding: 4rem 2rem;
     background-color: #0f121a;
     /* Slightly darker than body for depth */
-    text-align: center;
+    text-align: left;
 }
 
 #skills h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2.5rem;
-    color: #00bcd4;
+    /*color: #00bcd4;*/
 }
 
 .skill-filters {
