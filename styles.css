@@ -389,7 +389,7 @@ h2 {
 /* Skills Section */
 #skills {
     padding: 4rem 2rem;
-    background-color: #0f121a;
+    /* background-color: #0f121a; */
     /* Slightly darker than body for depth */
     text-align: left;
 }
