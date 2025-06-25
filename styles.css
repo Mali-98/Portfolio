@@ -118,7 +118,7 @@ nav ul li a.active {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background-color: #0b0e17;
+    /*background-color: #0b0e17;*/
     gap: 4rem;
     position: relative;
     z-index: 1;
